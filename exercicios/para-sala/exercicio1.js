@@ -1,10 +1,8 @@
-/*Crie uma classe chamada User com os atributos:
-- nome;
+/* Crie os seguintes métodos com as suas regras:
+ -nome;
 - username;
 - email;
 - senha;
-
-Crie os seguintes metódos com as suas regras:
 
 - login: para logar precisa do email e senha e verificar se o email e senha estão corretos, se estiverem, retornar uma mensagem de login realizado,
 senão, falha no login;
@@ -12,40 +10,44 @@ senão, falha no login;
 */
 
 class User {
-    constructor(name, userName, email, password){
-        this.name = name;
-        this.userName = userName;
-        this.email = email;
-        this.password = password;
+    constructor(name, userName, email, senha) {
+        this.name = name,
+        this.userName = userName,
+        this.email = email,
+        this.senha = senha
     }
 
-    login(email, password){
-        if(email === this.email && password === this.password){
-           return `Login realizado com sucesso/Login successfully`
-        } else{
-        return `Autenticação falhou / Authentication failed`
+   getEmail() {
+    return this.email
+   }
+
+   getSenha() {
+    return this.senha
+   }
+
+   getEmail() {
+    return this.email
+   }
+
+   login(email, senha) {
+        if (email === this.getEmail() && senha === this.getSenha()){
+            console.log('Login realizado com sucesso');
+        } else {
+            console.log('falha de login, verifique seu email ou senha');
         }
     }
 
-    setPassword(newPassword){
-        this.password = newPassword;
-
-        return `Senha alterada`
+    setSenha(novaSenha){
+        this.novaSenha === novaSenha
+        return 'sua senha foi alterada'
     }
-
-    getEmail(){
-        return `o seu email cadastrado é ${this.email}`
-    }
+    
 }
 
+const user = new User('Raissa', 'raissaBarata', 'raissa@gmail.com', '1234$')
 
-const userJessi = new User('Jéssica', 'osko_jess', 'oskojess@gmail.com', 'senha123#');
-console.log(userJessi);
+console.log(user);
 
-console.log(userJessi.login('oskojess@gmail.com', 'senha123#'))
-console.log(userJessi.setPassword('senhanova'))
-
-console.log(userJessi.password);
-
-
+console.log(user.login('raissaa@gmail.com', '1234$'));
+console.log('correto',user.login('raissa@gmail.com', '1234$'));
 
