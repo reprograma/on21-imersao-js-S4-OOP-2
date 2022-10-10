@@ -12,7 +12,7 @@ se estiverem, retornar uma mensagem de login realizado, senão, falha no login;
 */
 
 module.exports = class User {
-  constructor(nome, username, email, senha) {
+  constructor(nome, username, email, senha, filho) {
     this.nome = nome;
     this.username = username;
     this.email = email;

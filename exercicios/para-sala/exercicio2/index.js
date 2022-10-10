@@ -13,3 +13,5 @@ console.log(user1.login("fernandasoares@email.com", "12345"));
 console.log(`Senha atual: ${user1.senha}`);
 console.log(user1.alteraSenha("senha_errada", "00000"));
 console.log(user1.alteraSenha("12345", "00000"));
+console.log((user1.username = "new username"));
+console.log(user1.email);
