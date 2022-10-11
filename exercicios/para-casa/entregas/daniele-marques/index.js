@@ -12,8 +12,7 @@ class aboutBook {
       "Os sete",
       9788845292613,
       this.authorName.name,
-      126,
-      90,
+      126.9,
       1
     );
     return book;
