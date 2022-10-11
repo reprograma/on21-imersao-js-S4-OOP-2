@@ -36,14 +36,15 @@ const author = new Author('Mariana', 'any_nick', 'any_email@mail.com', 'any_pass
 
 author.createPost('First Post')
 // ------------------------------------------------------
-console.log(author.postQtd) // 1 post(s) created.
-console.log(author.postsList) // Author posts: First Post 
+author.postQtd// 1 post(s) created.
+author.postsList // Author posts: First Post 
 // ------------------------------------------------------
 author.createPost('Second Post')
 // ------------------------------------------------------
-console.log(author.postQtd) // 2 post(s) created.
-console.log(author.postsList) // Author posts: First Post,Second Post 
-console.log(author)
+author.postQtd // 2 post(s) created.
+author.postsList // Author posts: First Post,Second Post 
+
+author
 
 /*
 Author {
