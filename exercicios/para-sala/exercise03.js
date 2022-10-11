@@ -7,18 +7,18 @@ const User = require('./exercise02')
 
 class Author extends User {
 
-  #postsList
+  postsList
   #postsQtd
 
-  constructor(email, password) {
-    super(email, password)
+  constructor( email, password, name, username,) {
+    super( email, password, name, username,)
 
     this.#postsQtd = 0
-    this.#postsList = []
+    this.postsList = []
   }
 
   createPost(post){
-    this.#postsList.push(post)
+    this.postsList.push(post)
     this.#postsQtd++    
   }
 
@@ -27,19 +27,29 @@ class Author extends User {
   }
 
   get postsList(){
-    return `Author posts: ${this.#postsList} `
+    return `Author posts: ${this.postsList} `
   }
 
 }
 
-const author = new Author('any_email@mail.com', '123456')
+const author = new Author('Mariana', 'any_nick', 'any_email@mail.com', 'any_password')
 
 author.createPost('First Post')
 // ------------------------------------------------------
-author.postQtd // 1 post(s) created.
-author.postsList // Author posts: First Post 
+console.log(author.postQtd) // 1 post(s) created.
+console.log(author.postsList) // Author posts: First Post 
 // ------------------------------------------------------
 author.createPost('Second Post')
 // ------------------------------------------------------
-author.postQtd // 2 post(s) created.
-author.postsList // Author posts: First Post,Second Post 
+console.log(author.postQtd) // 2 post(s) created.
+console.log(author.postsList) // Author posts: First Post,Second Post 
+console.log(author)
+
+/*
+Author {
+  name: 'Mariana',
+  username: 'any_nick',
+  email: 'any_email@mail.com',
+  postsList: [ 'First Post', 'Second Post' ]
+}
+*/
