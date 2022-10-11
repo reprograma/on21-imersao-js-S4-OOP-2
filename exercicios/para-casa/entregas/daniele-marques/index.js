@@ -1,84 +1,17 @@
-class Author {
-  #name;
-  #email;
-  #birthdate;
+import { Author } from "./Author.js";
+import { Book } from "./Book.js";
 
-  constructor(name, email, birthdate) {
-    this.#name = name;
-    this.#email = email;
-    this.#birthdate = birthdate;
-  }
-
-  get name() {
-    return this.#name;
-  }
-  set name(param) {
-    this.#name = param;
-  }
-  get email() {
-    return this.#email;
-  }
-  set email(param) {
-    this.#email = param;
-  }
-  get birthdate() {
-    return this.#birthdate;
-  }
-  set birthdate(param) {
-    this.#birthdate = param;
-  }
-}
-
-class Book {
-  #name;
-  #isbn;
-  #author;
-  #price;
-  #qty;
-
-  constructor(name, isbn, author, price, qty) {
-    this.#author = author;
-    this.#isbn = isbn;
-    this.#name = name;
-    this.#price = price;
-    this.#qty = qty;
-  }
-
-  get name() {
-    return this.#name;
-  }
-
-  get isbn() {
-    return this.#isbn;
-  }
-
-  get author() {
-    return this.#author;
-  }
-
-  get price() {
-    return this.#price;
-  }
-
-  get qty() {
-    return this.#qty;
-  }
-
-  set price(param) {
-    this.#price = param;
-  }
-
-  set qty(param) {
-    this.#qty = param;
-  }
-}
-
-class Principal {
+class aboutBook {
+  authorName = new Author(
+    "André Vianco",
+    "vianco@gmail",
+    new Date(10, 1, 1975)
+  );
   book = () => {
     const book = new Book(
-      "O Senhor dos Anéis",
+      "Os sete",
       9788845292613,
-      "J. R. R. Tolkien",
+      this.authorName.name,
       126,
       90,
       1
@@ -87,6 +20,6 @@ class Principal {
   };
 }
 
-const instanceBook = new Principal();
+const instanceBook = new aboutBook();
 
 console.log(instanceBook.book().author);
