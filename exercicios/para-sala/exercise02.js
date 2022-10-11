@@ -54,3 +54,4 @@ userProfile.password = 'new_password'
 userProfile.password // new_password
 userProfile.email // any_email@mail.com
 
+module.exports = User
