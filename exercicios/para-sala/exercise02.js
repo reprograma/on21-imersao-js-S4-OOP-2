@@ -8,6 +8,8 @@ retornado quando criamos um novo objeto a partir de user. Precisamos refatorar n
 
 class User {
   
+  name
+  username
   #password // ao declarar o privado precisa colocar o # e propriedade antes do constructor
   email
 
