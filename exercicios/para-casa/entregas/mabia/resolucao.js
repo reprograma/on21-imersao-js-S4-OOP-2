@@ -84,3 +84,7 @@ class Book {
     this.#qty = newQty;
   }
 }
+
+class Main extends Book {
+    
+}
