@@ -1,29 +1,39 @@
 import { User } from './exercicio2.js';
-/* Crie uma classe chamada Author que extenderá de User as informações de email e password e terá um atributo privado com o número de post inicializando com 0. Essa classe terá dois metódos, um para criar o post que incrementará a quantidade de post e o outro obter o número de post criados. Observação: Não criaremos a implementação da adição do post; */
+/*  Crie uma classe chamada Author que extenderá de User as informações de nome e terá um atributo privado com o número de post inicializando com 0. 
+
+Essa classe terá dos metódos, um para criar o post e o outro obter o número de post criados. 
+
+Observação: Criaremos a implementação da adição do post e da QUANTIDADE DE POST; */
 
 class Author extends User {
-    #postNumber
-    constructor(name, username, email, password) {
-        super(name, username, email, password)
+    #numPost
+    constructor(name, username, email) {
+        super(name, username, email)
         
-    this.#postNumber = 0
-    }
-    set postNumber(postNumber) {        
-        return this.#postNumber += postNumber 
+    this.#numPost = 0
+    this.post = []
     }
 
-    get postNumber(){
-        return this.#postNumber
+ 
+    get numPost() {        
+        return this.#numPost
     }
+
+    createPost(post){
+        this.post.push(post)
+        this.#numPost++
+    }
+
  }
 
-//  const author1 = new Author('Joana', 'Jo', 'email@email.com', '123')
+ const author1 = new Author('Joana', 'Jo', 'email@email.com', '123')
  
-//  console.log(author1);
-//  author1.postNumber = 2
-//  author1.postNumber = 1
+ console.log(author1);
 
-// console.log(`Author's posts: ${author1.postNumber}`)
+author1.createPost('post');
+author1.createPost('post 2');
 
+ console.log('Post quantity: ', author1.numPost)
 
+ console.log(author1);
 
