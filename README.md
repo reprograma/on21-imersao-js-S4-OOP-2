@@ -163,7 +163,7 @@ O polimorfismo de coerção é a transformação direta de um tipo em outro. Iss
 * [Material](/material)
 
 ### Links Úteis
-* [OOP: O que é?]((https://www.alura.com.br/artigos/poo-programacao-orientada-a-objetos))
+* [OOP: O que é?](https://www.alura.com.br/artigos/poo-programacao-orientada-a-objetos)
 * [Polymorphism is an OOP Superpower](https://medium.com/@andrewkoenigbautista/oop-there-it-is-polymorphism-82ca1e85f11)
 * [Conceitos do Polimorfismo](https://stackify.com/oop-concept-polymorphism/)
 * [Definição do Polimorfismo](https://learn.microsoft.com/pt-br/dotnet/csharp/fundamentals/object-oriented/polymorphism)
