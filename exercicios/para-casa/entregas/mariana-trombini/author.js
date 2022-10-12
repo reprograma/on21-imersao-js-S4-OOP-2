@@ -1,17 +1,17 @@
 class Author {
 
-  #name
+  _name
   #email
   #birthdate
 
   constructor(name, email, birthdate) {
-    this.#name = name
+    this._name = name
     this.#email = email
     this.#birthdate = birthdate
   }
 
   get name(){
-    return this.#name
+    return this._name
   }
 
   get email(){
@@ -22,9 +22,10 @@ class Author {
     return this.#birthdate
   }
 
+
   set name(newName){
-    this.#name = newName
-    return this.#name
+    this._name = newName
+    return this._name
   }
 
   set email(newEmail){
