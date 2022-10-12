@@ -65,6 +65,6 @@ class Author {
 
 }
 
-module.exports = Author;
-
 const Autora = new Author("Valenthina Maria Temudo", "temudo.valenthina@gmail.com", "09/09/1996")
+
+module.exports = Author;
