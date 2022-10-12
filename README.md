@@ -29,7 +29,10 @@ O que veremos na aula de hoje?
       - [Herança](#herança)
       - [Encapsulamento](#encapsulamento)
       - [Abstração](#abstração)
+      - [Diagrama de Uso](#diagrama-de-uso)
+      - [Encapsulamento x Abstração](#encapsulamento-x-abstração)
       - [Polimorfismo](#polimorfismo)
+      - [**Tipos de polimorfismo:**](#tipos-de-polimorfismo)
     - [Exercícios](#exercícios)
     - [Material da aula](#material-da-aula)
     - [Links Úteis](#links-úteis)
@@ -111,10 +114,45 @@ devem ser usados ​​de acordo com o quão rigoroso você deseja que o acesso 
 em seu programa seja.
 
   #### Abstração
-  [CONTEUDO]
+O conceito de abstração consiste em esconder os detalhes de algo, no caso, os detalhes desnecessários. A abstração permite que o programador foque nos detalhes de implementação das ações para as classes, métodos disponíveis, tornando a programação mais simples. (Exemplos de objetos do mundo real cairiam bem, como por exemplo máquina de café, carro, ou até mesmo computador).
+
+#### Diagrama de Uso
+
+Uma classe representa um conceito que encapsula estado (atributos) e comportamento (operações). Cada atributo tem um tipo. Cada operação tem uma assinatura. O nome da classe é a única informação obrigatória.
+
+<h1 align="center">
+  <img src="assets/abs.png" alt="logo reprograma" width="500">
+</h1>
+
+#### Encapsulamento x Abstração 
+
+| Encapsulamento | Abstração |
+| --- | --- |
+| Processo de ocultar informações indesejadas e mostrar informações relacionadas | Processo para armazenar informações relacionadas |
+| Processo de ocultar informações indesejadas e mostrar informações relacionadas | Pode ser alcançado usando classes |
+| O objeto que resulta no encapsulamento não precisa ser abstraído | O objeto que ajuda a realizar a abstração precisa ser encapsulado |
+| Resolve problemas no nível de implementação | Resolve problemas no nível do design |
 
   #### Polimorfismo
-  [CONTEUDO]
+A palavra polimorfismo significa "de muitas formas", e no contexto de POO, tem dois aspectos distintos: (1) os objetos de uma classe filha podem ser tratados como objetos de uma classe pai, em locais como parâmetros de métodos, coleções e matrizes; (2) classes filhas de uma mesma classe, respondem a mesma mensagem, cada uma de uma forma diferente.
+
+  #### **Tipos de polimorfismo:**
+
+**Subtipo ou Subtype**
+
+O polimorfismo de subtipo é o tipo mais comum de polimorfismo, usando um nome de classe para fazer referência a vários tipos de subtipos de uma só vez. O polimorfismo ocorre em tempo de execução, por isso mesmo que os métodos do pai sejam reescritos ou implementados de maneira diferente pelos filhos, todos os subtipos podem ser referenciados utilizando a superclasse.
+
+**Sobrecarga ou Overloading**
+
+Sobrecarga permite que funções com o mesmo nome ajam de forma diferente para cada tipo. Por exemplo, dados dois `int` e o operador `+`, ele os adiciona. Dadas duas strings e o operado `+`, ela as concatena. Isso é chamado de sobrecarga, a execução do método será definida de acordo com quantidade ou tipos de parâmetros da função, então dependerá do que for passado.
+
+**Polimorfismo Paramétrico**
+
+Um polimorfismo paramétrico fornece uma maneira de usar uma mesma função para interagir com vários tipos. Diferente de sobrecarga (overloading), basicamente é uma função ou um tipo de dado que pode ser escrito genericamente para que ele possa lidar com valores de forma idêntica sem depender do seu tipo. Esse tipo de polimorfismo só ocorrem em linguagens tipadas.
+
+**Coerção ou Casting**
+
+O polimorfismo de coerção é a transformação direta de um tipo em outro. Isso acontece quando um tipo é convertido em outro tipo. Antes, o polimorfismo ocorria por meio da interação com diferentes tipos por meio da classe de objetos ou das funções. O tipo de um objeto pode ser selecionado quando o programa é executado. Uma única função pode funcionar com diferentes tipos.
   
 ***
 ### Exercícios 
@@ -125,7 +163,10 @@ em seu programa seja.
 * [Material](/material)
 
 ### Links Úteis
-* 
+* [OOP: O que é?]((https://www.alura.com.br/artigos/poo-programacao-orientada-a-objetos))
+* [Polymorphism is an OOP Superpower](https://medium.com/@andrewkoenigbautista/oop-there-it-is-polymorphism-82ca1e85f11)
+* [Conceitos do Polimorfismo](https://stackify.com/oop-concept-polymorphism/)
+* [Definição do Polimorfismo](https://learn.microsoft.com/pt-br/dotnet/csharp/fundamentals/object-oriented/polymorphism)
 
 <p align="center">
 Desenvolvido com :purple_heart:  
