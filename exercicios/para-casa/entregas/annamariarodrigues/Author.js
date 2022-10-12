@@ -38,7 +38,3 @@ module.exports = Author;
 
  const Autor = new Author('Anna Maria Rodrigues', 'anna@gmail.com', '13/07/1982') ;
 
-console.log(Autor.birthdate)
-console.log(Autor.name)
-console.log(Autor.name='Antonia')
-console.log(Autor.setName('Anna Maria'))

@@ -1,20 +1,18 @@
 const Autor = require('./Author.js') 
 
-//class Book extends Autor{
-   class Book {
- #name;
+class Book extends Autor{
+  #nome;
  #isbn;
  #price;
  #qty;
  autor;
-    constructor(name,isbn, autor, price, qty)
+    constructor(nome,isbn, name, price, qty)
    {
-   //super(name)
-    this.#name =name;
+   super(name)
+    this.#nome =nome;
     this.#isbn = isbn;
     this.#price = price;
     this.#qty=qty; 
-    this.autor = autor;
    }
 
     get nome(){return this.#nome;}
@@ -25,9 +23,7 @@ const Autor = require('./Author.js')
     set price(price) {return this.#price=price}
     get qty(){return this.#qty}
     set qty(qty) {return this.#qty=qty}
-    get autor(){return this.autor}
-    set autor(autor) {return this.autor=autor}
-
+  
     
     getNome(){return `O Nome do Livro é ${this.#nome}`}
     getISBN(){return `O nr da inscrição é ${this.#isbn}`}
