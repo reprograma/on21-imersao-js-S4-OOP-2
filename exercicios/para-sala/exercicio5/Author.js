@@ -6,7 +6,7 @@ o outro obter o número de post criados.
 
 Observação: Não criaremos a implementação da adição do post; */
 
-const User = require("./User");
+const User = require("../exercicio5/User.js");
 
 module.exports = class Author extends User {
   #posts;
@@ -14,6 +14,14 @@ module.exports = class Author extends User {
   constructor(email, senha) {
     super(email, senha);
     this.#posts = 0;
+  }
+
+  login(email, senha) {
+    let isAuthor = true;
+    if (email === this.email && senha === this.senha && isAuthor)
+      return "Login do author realizado!";
+
+    return "Falha no login do author!";
   }
 
   createPosts(qtd) {
