@@ -6,9 +6,9 @@ export class Author {
         #birthdate;
       
     constructor(name, email, birthdate){
-          this.#name = name;
-          this.#email = email;
-          this.#birthdate = birthdate;
+        this.#name = name;
+        this.#email = email;
+        this.#birthdate = birthdate;
         }
 
         get name(){
