@@ -1,20 +1,19 @@
-/* Crie uma classe chamada Author que entenderá de User as 
-informações de email e password e 
+/* Crie uma classe chamada Author que extenderá de User as informações de nome e 
 terá um atributo privado com o número de post inicializando com 0. 
 
-Essa classe terá dos métodos, um para criar o post 
-que incrementará a quantidade de post e 
+Essa classe terá dos metódos, um para criar o post e 
 o outro obter o número de post criados. 
 
-Observação: Não criaremos a implementação da adição do post; */
+Observação: Criaremos a implementação da adição do post e da QUANTIDADE DE POST; */
 const User = require('./UserRef.js');
 
 class Author extends User{
     #post;
-    constructor(email, senha)
+    constructor(nome)
     {
-        super(email,senha)
+        super(nome)
         this.#post = 0;
+    
     }
     
     criarPost(){
@@ -27,7 +26,7 @@ class Author extends User{
     }
 }
 
-const Autor = new Author('anna@gmail.com', '12345', 0)
+const Autor = new Author('Anna Maria' )
 
 console.log(Autor)
 

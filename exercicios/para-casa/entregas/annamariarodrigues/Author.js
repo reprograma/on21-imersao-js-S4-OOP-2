@@ -8,7 +8,10 @@ class Author{
         this.#birthdate = birthdate;
     }
     get name(){return this.#name;}
-    set name(name){return this.#name =name;}
+
+    set name(name){
+        return this.#name =name;
+    }
     get email(){return this.#email}
     set email(email){return this.#email=email;}
     get birthdate(){return this.#birthdate}
@@ -35,5 +38,7 @@ module.exports = Author;
 
  const Autor = new Author('Anna Maria Rodrigues', 'anna@gmail.com', '13/07/1982') ;
 
-
-
+console.log(Autor.birthdate)
+console.log(Autor.name)
+console.log(Autor.name='Antonia')
+console.log(Autor.setName('Anna Maria'))

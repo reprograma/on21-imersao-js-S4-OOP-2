@@ -1,17 +1,20 @@
 const Autor = require('./Author.js') 
 
-class Book extends Autor{
- #nome;
+//class Book extends Autor{
+   class Book {
+ #name;
  #isbn;
  #price;
  #qty;
-    constructor(nome,isbn, name, price, qty)
+ autor;
+    constructor(name,isbn, autor, price, qty)
    {
-    super(name)
-    this.#nome =nome;
+   //super(name)
+    this.#name =name;
     this.#isbn = isbn;
     this.#price = price;
     this.#qty=qty; 
+    this.autor = autor;
    }
 
     get nome(){return this.#nome;}
@@ -22,6 +25,8 @@ class Book extends Autor{
     set price(price) {return this.#price=price}
     get qty(){return this.#qty}
     set qty(qty) {return this.#qty=qty}
+    get autor(){return this.autor}
+    set autor(autor) {return this.autor=autor}
 
     
     getNome(){return `O Nome do Livro é ${this.#nome}`}
@@ -50,5 +55,6 @@ class Book extends Autor{
     
         
 }
+module.exports = Book;
 
-const Livro = new Book('Harry Potter - Ordem da Fênix','123145', 'Hollinks', 35, 3)
+const Livro = new Book('Harry Potter - Ordem da Fênix','123145', 'Hotlinks', 35, 3)
