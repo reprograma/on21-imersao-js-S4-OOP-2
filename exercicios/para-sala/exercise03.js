@@ -3,7 +3,7 @@ e terá um atributo privado com o número de post inicializando com 0. Essa clas
 um para criar o post que incrementará a quantidade de post e o outro obter o número de post criados. 
 Observação: Não criaremos a implementação da adição do post; */ 
 
-const User = require('./exercise02')
+const User = require('./exercise04')
 
 class Author extends User {
 
@@ -44,7 +44,7 @@ author.createPost('Second Post')
 author.postQtd // 2 post(s) created.
 author.postsList // Author posts: First Post,Second Post 
 
-author
+//author
 
 /*
 Author {
@@ -54,3 +54,5 @@ Author {
   postsList: [ 'First Post', 'Second Post' ]
 }
 */
+
+module.exports = Author
