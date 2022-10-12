@@ -1,28 +1,30 @@
-module.exports = class Book {
-  #name;
+const Author = require("./Author.js");
+
+module.exports = class Book extends Author {
+  #nameBook;
   #isbn;
-  #author;
+  #name;
   #price;
   #qty;
 
-  constructor(name, isbn, author, price, qty) {
-    this.#name = name;
+  constructor(nameBook, isbn, name, price, qty) {
+    super(name);
+    this.#nameBook = nameBook;
     this.#isbn = isbn;
-    this.#author = author;
     this.#price = price;
     this.#qty = qty;
   }
 
-  get name() {
-    return this.#name;
+  get nameBook() {
+    return this.#nameBook;
   }
 
   get isbn() {
     return this.#isbn;
   }
 
-  get author() {
-    return this.#author;
+  get name() {
+    return this.#name;
   }
 
   get price() {
