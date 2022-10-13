@@ -1,20 +1,20 @@
 module.exports = class Author {
-  #name;
+  _name;
   #email;
   #birthdate;
 
   constructor(name, email, birthdate) {
-    this.#name = name;
+    this._name = name;
     this.#email = email;
     this.#birthdate = birthdate;
   }
 
   get name() {
-    return this.#name;
+    return this._name;
   }
 
   set name(newName) {
-    return (this.#name = newName);
+    return (this._name = newName);
   }
 
   get email() {
