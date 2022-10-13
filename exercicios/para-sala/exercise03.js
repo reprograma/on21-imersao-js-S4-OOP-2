@@ -3,7 +3,7 @@ e terá um atributo privado com o número de post inicializando com 0. Essa clas
 um para criar o post que incrementará a quantidade de post e o outro obter o número de post criados. 
 Observação: Não criaremos a implementação da adição do post; */ 
 
-const User = require('./exercise04')
+const User = require('./exercise02')
 
 class Author extends User {
 
