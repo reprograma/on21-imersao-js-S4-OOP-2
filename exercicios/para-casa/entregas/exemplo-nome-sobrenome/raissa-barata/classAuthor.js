@@ -1,5 +1,3 @@
-// falta herdar a classe autor 
-
 class Author {
     #name
     #email
@@ -20,7 +18,7 @@ class Author {
         return this.#birthdate
     }
 
-    //eu perciso colocar um return no set já que ele apenas executa algo dentro da classe e nao precisa teoricamente retornar nada.
+    //eu preciso colocar um return no set já que ele apenas executa algo dentro da classe e nao precisa teoricamente retornar nada.
     set name(newName) {
         return this.#name = newName
     } 
@@ -53,11 +51,10 @@ class Author {
 
 }
 
-
-
-
 const autoraRaissa = new Author('Raissa', 'raissa@gmail.com', '16/09/1992')
 console.log(autoraRaissa);
 console.log(autoraRaissa.setName('Raissa Barata Pereira') );
 console.log(autoraRaissa.getEmail());
 console.log(autoraRaissa.name);
+
+module.exports = Author
