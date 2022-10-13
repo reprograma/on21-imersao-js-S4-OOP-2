@@ -39,6 +39,10 @@ class Author {
   }
 }
 
+const dadosAuthor = new Author("Mabia", "duartecostap@gmail.com", "03/12/1993");
+
+console.log(dadosAuthor.email);
+
 class Book {
   #name;
   #isbn;
@@ -47,8 +51,6 @@ class Book {
   #qty;
 
   constructor(name, isbn, author, price, qty) {
-    super(name);
-
     this.#name = name;
     this.#isbn = isbn;
     this.#author = author;
@@ -85,6 +87,12 @@ class Book {
   }
 }
 
-class Main extends Book {
-    
-}
+const livroReceitas = new Book(
+  "Livro de Receitas Veganas",
+  "4433",
+  "Mabia",
+  "27.5",
+  "2.000"
+);
+
+console.log(livroReceitas.qty);
