@@ -39,29 +39,29 @@ Explicação do exercício:
         }
      
      
-     get Name(){
+     get name(){
         return `Seu nome é ${this.#name}`
      
      }
      
-     get Email(){
+     get email(){
        return `Email cadastrado ${this.#email}`
      
     }
-    get Birthdate(){
+    get birthdate(){
        return `Sua data de nascimento é ${this.#birthdate}`
     
     }
     
-    set Name(newName){
+    set name(newName){
      this.#name = newName
      
      }
-     set Email(newEmail){
+     set email(newEmail){
         this.#email = newEmail
     
     }
-    set Birthdate(newBirthdate){
+    set birthdate(newBirthdate){
        this.#birthdate = newBirthdate 
     
       }
