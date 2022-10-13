@@ -3,7 +3,7 @@ um novo objeto a partir de User. Precisamos refatorar nosso código.
 
 convenções de segurança da oop: 
 
-- público public - name 
+- público public - this.name 
 - privado private  - #
 - protegido protected  - _ */
 
@@ -12,7 +12,7 @@ class User {
 
     #password;
     email;
-
+    
     constructor(name, userName, email, password){
         this.name = name;
         this.userName = userName;
@@ -28,27 +28,23 @@ class User {
         }
     }
 
-    //getter e setter
-
-  /* get password(){
+   get password(){
     return this.#password;
    }
 
    set password(newPassword){
         this.#password = newPassword;
-   }*/
-
-   getPassword(){
-        return this.#password
    }
 
-   get password(){  
-    return this.#password
-   }
+   getEmail(){}
 
 
 }
 
 const userJessi = new User('Jéssica', 'osko_jess', 'oskojess@gmail.com', 'senha123#');
+console.log(userJessi.password)
 
+userJessi.password = 'senhaalterada'
+
+console.log(userJessi.password)
 
