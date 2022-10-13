@@ -1,16 +1,17 @@
-/* Crie uma classe chamada Author que extenderá de User as informações de nome e 
+/* Crie uma classe chamada Author que extenderá de User as informações de email e password e 
 terá um atributo privado com o número de post inicializando com 0. 
 
-Essa classe terá dos metódos, um para criar o post e 
+Essa classe terá dos metódos, um para criar o post que incrementará a quantidade de post e 
 o outro obter o número de post criados. 
 
-Observação: Criaremos a implementação da adição do post e da QUANTIDADE DE POST; */
+Observação: Não criaremos a implementação da adição do post; */
 
 
 class User {
 
     #password;
-
+    email;
+    
     constructor(name, userName, email, password){
         this.name = name;
         this.userName = userName;
@@ -34,40 +35,28 @@ class User {
         this.#password = newPassword;
    }
 
-
 }
 
 class Author extends User{
     #numPost;
 
-    constructor(nome){
-        super(nome)
+    constructor(email, password){
+        super(email, password)
         this.#numPost = 0
-        this.post = []
+    }
+
+    isLogged(){
+        //...
     }
 
     createPost(post){
-        this.post.push(post)
-        this.#numPost++    
-      }
-    
-      get numPost(){
-        return `${this.#numPost} post(s) created.` 
-      }
-    
-      get post(){
-        return `Author posts: ${this.post} `
-      }
-    
+        //..
+        this.#numPost++;
+    }
+
+    get numPost(){
+        return this.#numPost;
+    }
+
+
 }
-
-let authorJess = new Author('oskojess', '1978927')
-
-
-
-
-
-
-
-
-
