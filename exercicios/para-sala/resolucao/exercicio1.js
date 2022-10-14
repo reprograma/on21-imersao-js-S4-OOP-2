@@ -37,10 +37,10 @@ class User {
     }
 }
 
-const userJaque = new User('Jaqueline', 'amarajaque', 'jaqueshanti@gmail.com', 'senha123')
+const userJaque = new User('Jaqueline', 'amarajaque', 'meuemail@mail.com', 'senha123')
 console.log(userJaque);
 
-console.log(userJaque.login('jaqueshanti@gmail.com', 'senha123'))
+console.log(userJaque.login('meuemail@mail.com', 'senha123'))
 console.log(userJaque.setPassword('senhanova'))
 
 console.log(userJaque);

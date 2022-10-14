@@ -54,7 +54,7 @@ class User {
     
 }
 
-const userJaque = new User('Jaqueline', 'amarajaque', 'jaqueshanti@gmail.com', 'senha123')
+const userJaque = new User('Jaqueline', 'amarajaque', 'meuemail@mail.com', 'senha123')
 console.log(userJaque.password)
 userJaque.password = 'senhaalterada'
 

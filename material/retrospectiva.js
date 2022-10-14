@@ -1,5 +1,13 @@
+// 4 pilares:
+// -Herança;
+// -Encapsulamento;
+// -Abstraçao;
+// -Polimorfismo
+
 /* - Classes: 
 Uma classe é representada por uma Entidade -> É representação de um objeto com as suas propriedades.
+
+supr é uma pesquia de propriedades herdados de uma class
 */
 
 
