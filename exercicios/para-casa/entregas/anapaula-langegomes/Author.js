@@ -1,9 +1,9 @@
 export class Author {
 
-    class Author {
-        #nameAuthor;
-        #email;
-        #birthdate;
+class Author {
+    #nameAuthor;
+    #email;
+    #birthdate;
       
     constructor(name, email, birthdate){
         this.#name = name;
