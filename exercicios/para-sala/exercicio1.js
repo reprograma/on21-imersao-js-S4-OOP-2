@@ -11,38 +11,41 @@ senão, falha no login;
 - alterar senha: possibilidade de trocar a senha atual por uma senha nova.
 */
 
-
-class  User{
-    #senha
-    constructor(name, username, email, senha){
-        this.name = name,
-        this.username = username,
-        this.email = email,
-        this.#senha = senha
+class User {
+    constructor(name, userName, email, password){
+        this.name = name;
+        this.userName = userName;
+        this.email = email;
+        this.password = password;
     }
 
-    login(email, senha){
-        if(senha === this.#senha && email === this.email){
-           return 'Login efetuado com sucesso'
-        }else{
-          return 'Não foi possivel efetuar o login'
+    login(email, password){
+        if(email === this.email && password === this.password){
+           return `Login realizado com sucesso/Login successfully`
+        } else{
+        return `Autenticação falhou / Authentication failed`
         }
     }
 
-    get senha(){
-        return this.#senha
+    setPassword(newPassword){
+        this.password = newPassword;
 
+        return `Senha alterada`
     }
 
-    set senha(newSenha){
-        this.#senha = newSenha
-        return  'Senha alterada'
+    getEmail(){
+        return `o seu email cadastrado é ${this.email}`
     }
 }
 
 
-const userMione = new User('Hermione', 'mione123', 'mioneg@hotmail.com', '123456')
+const userJessi = new User('Jéssica', 'osko_jess', 'oskojess@gmail.com', 'senha123#');
+console.log(userJessi);
 
-console.log(userMione.login('mioneg@hotmail.com', '13456'))
-console.log(userMione)
-module.exports = User()
+console.log(userJessi.login('oskojess@gmail.com', 'senha123#'))
+console.log(userJessi.setPassword('senhanova'))
+
+console.log(userJessi.password);
+
+
+
