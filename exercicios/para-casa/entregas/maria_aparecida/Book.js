@@ -24,8 +24,16 @@ class Book extends Author {
     return this.price;
   }
 
+  setPrice(newPrice) {
+    this.price = newPrice;
+  }
+
   getQty() {
     return this.qty;
+  }
+
+  setQty(newQty) {
+    this.qty = newQty;
   }
 }
 
