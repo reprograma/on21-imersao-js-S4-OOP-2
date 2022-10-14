@@ -1,18 +1,36 @@
-import { Author } from './Author.js'
+const Author = require('./Author')
 
-export class Book extends Author {
-    #booksName
-    #isbn
-    #price
-    #qty
+class Book extends Author{
 
-constructor(authorsName, booksName, isbn, price, qty) {
-    super(authorsName)
-    this.#booksName = booksName
-    this.#isbn = isbn
-    this.#price = price
-    this.#qty = qty
-    
+    constructor(nameBook, isbn, nameAuthor, price, qty){
+        super(nameAuthor);
+        this.nameBook = nameBook;
+        this.isbn - isbn;
+        this.price = price;
+        this.qty = qty;
     }
 
+    getNameLivro(){
+        return this.nameBook;
+    }
+
+    getISB(){
+        return this.isbn;
+    }
+
+    getPrice(){
+        return this.price;
+    }
+
+    setPrice(value){
+        return this.price = value;
+    }
+
+    getQty(){
+        return this.qty;
+    }
+
+    setQty(qtd){
+        return this.qty = qtd;
+    }
 }
