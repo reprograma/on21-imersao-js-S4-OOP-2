@@ -19,7 +19,7 @@ class Book extends Author {
     }
 
     get nameBook() {
-        return this.nameBook;
+        return this.#nameBook;
     }
     get isbn() {
         return this.#isbn;
