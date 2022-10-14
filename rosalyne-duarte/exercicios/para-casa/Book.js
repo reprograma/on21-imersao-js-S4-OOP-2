@@ -44,7 +44,7 @@ class Book extends Author {
   getAuthorBook() {
     return `O nome do autor do livro é ${this.nameAuthor}`;
   }
-  daddosBook() {
+  dadosBook() {
     return ` ${this.#name}, ${this.#isbn}, ${this.#price}, , ${this.#qty}, ${
       this.nameAuthor
     }`;
