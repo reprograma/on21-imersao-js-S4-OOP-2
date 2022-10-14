@@ -1,38 +1,54 @@
-const Author = require("./Author");
+const Author = require("./Author.js");
 
-class Book extends Author{
-    #nameAuthor
-    #isbn
-    #price
-    #qty
-    constructor(nameAuthor, nameBook, isbn, price, qty){
-        super(nameAuthor)
-        this.#nameAuthor = nameAuthor
-        this.nameBook = nameBook
-        this.#isbn = isbn
-        this.#price = price
-        this.#qty = qty
-    }
-    getNameAuthor(){
-        return `O nome do autor desse livro é ${this.#nameAuthor}`
-    }
-    
-    getISBN(){
-        return `O código ISBN desse livro é ${this.#isbn}`
-    }
-    
-    getnameBook(){
-        return `O nome desse livro é ${this.nameBook}`
-    }
-    
-    getPrice(){
-        return `O preço desse livro é ${this.#price}`
-    }
-    
-    getQty(){
-        return `Temos em estoque ${this.#qty}`
-    }
-    
-    setQty()
+class Book extends Author {
+  #nameBook;
+  #isbn;
+  #price;
+  #qty;
+
+  constructor(nameBook, isbn, price, qty, nameAuthor) {
+    super(nameAuthor);
+    this.#nameBook = nameBook;
+    this.#isbn = isbn;
+    this.#price = price;
+    this.#qty = qty;
+  }
+
+  get name() {
+    return this.#nameBook;
+  }
+
+  get isbn() {
+    return this.#isbn;
+  }
+
+  get price() {
+    return this.#price;
+  }
+
+  get price() {
+    return this.#price;
+  }
+
+  get qty() {
+    return this.#qty;
+  }
+  set price(newPrice) {
+    this.#price = newPrice;
+  }
+
+  set qty(newQty) {
+    this.#qty = newQty;
+  }
+
+  getAuthorBook() {
+    return `O nome do autor deste livro é ${this.nameAuthor}`;
+  }
+  infosBook() {
+    return `Nome do livro: ${this.#nameBook}, ${this.#isbn}, ${this.#price} , ${this.#qty}. O autor da obre é ${
+      this.nameAuthor
+    }`;
+  }
 }
 
+module.exports = Book;
