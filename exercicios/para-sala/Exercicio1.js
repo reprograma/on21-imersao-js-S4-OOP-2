@@ -21,8 +21,9 @@ class User {
 
     login(email, password) {
         if(email !== this.email || password !== this.password) {
-            return "Falha ao tentar login: O e-mail ou a senha esta incorreto"
+            return "Falha na autenticação: O e-mail ou a senha esta incorreto"
         } 
+        
         return "Login realizado com sucesso"
     }
 
@@ -37,7 +38,7 @@ class User {
     }
 
     getEmail(){
-        return  
+        return  `O seu e-mail cadastrado é ${this.email}`
     }
     
 }
@@ -47,6 +48,7 @@ const userEli = new User("Eliane", "eliAlmeida", "elialmeida@email.com", "125D&3
 console.log(userEli.login("elialmeida@email.com", "12587"))
 console.log(userEli.login("elial@email.com", "125D&3"))
 console.log(userEli.login("elialmeida@email.com", "125D&3"))
+console.log(userEli.getEmail())
 console.log(userEli.setPassword("125D&3"))
 console.log(userEli.setPassword("128D&3"))
 console.log(userEli)

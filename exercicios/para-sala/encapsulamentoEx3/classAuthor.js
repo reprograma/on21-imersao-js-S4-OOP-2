@@ -6,24 +6,27 @@ o outro obter o número de post criados.
 
 Observação: Não criaremos a implementação da adição do post; */
 
-import { User } from "./Exercicio2.js"
+import { User } from '../encapsulamentoEx2/classUser.js'
 
 export class Author extends User {
+    #numPost
 
-    #post
-
-    constructor(email, password, post) {
+    constructor(email, password) {
         super(email, password)
 
-        this.#post = 0;
+        this.#numpost = 0;
 
     }
 
-    createPost() {
-        this.#post += this.#post
+    isLogged(){
+        //...
     }
 
-    get post() {
+    createPost(post) {
+        this.#numPost++;
+    }
 
+    get numPost() {
+        return this.createPost()
     }
 }

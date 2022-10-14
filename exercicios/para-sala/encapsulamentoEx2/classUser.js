@@ -11,9 +11,9 @@ export class User {
     #password;
     #email;
 
-    constructor(name, username, email, password) { // todos os atributos dentro do constructor é publico
+    constructor(name, userName, email, password) { // todos os atributos dentro do constructor é publico
         this.name = name;
-        this.username = username;
+        this.userName = userName;
         this.#email = email;
         this.#password = password;
     }
@@ -39,34 +39,6 @@ export class User {
     
 }
 
-class Author extends User {
 
-    #numPost
 
-    constructor(email, password, post) {
-        super(email, password)
-
-        this.#numPost = 0;
-
-    }
-
-    islogged() {
-        //...
-    }
-
-    createPost(post) {
-        this.#post++;
-    }
-
-    get numPost() {
-        return this.createPost()
-    }
-
-const userEli = new User("Eliane", "eliAlmeida", "elialmeida@email.com", "125D&3")
-
-console.log(userEli.login("elialmeida@email.com", "12587"))
-console.log(userEli.login("elial@email.com", "125D&3"))
-console.log(userEli.login("elialmeida@email.com", "125D&3"))
-userEli.password = 'senha alterada'
-console.log(userEli.password)
 
