@@ -12,40 +12,41 @@ senão, falha no login;
 */
 
 class User {
-    constructor(name, userName, email, password){
-        this.name = name;
-        this.userName = userName;
-        this.email = email;
-        this.password = password;
-    }
+  constructor(name, userName, email, password) {
+    this.name = name;
+    this.userName = userName;
+    this.email = email;
+    this.password = password;
+  }
 
-    login(email, password){
-        if(email === this.email && password === this.password){
-           return `Login realizado com sucesso/Login successfully`
-        } else{
-        return `Autenticação falhou / Authentication failed`
-        }
+  login(email, password) {
+    if (email === this.email && password === this.password) {
+      return `Login realizado com sucesso/Login successfully`;
+    } else {
+      return `Autenticação falhou / Authentication failed`;
     }
+  }
 
-    setPassword(newPassword){
-        this.password = newPassword;
+  setPassword(newPassword) {
+    this.password = newPassword;
 
-        return `Senha alterada`
-    }
+    return `Senha alterada`;
+  }
 
-    getEmail(){
-        return `o seu email cadastrado é ${this.email}`
-    }
+  getEmail() {
+    return `o seu email cadastrado é ${this.email}`;
+  }
 }
 
+const userClaudia = new User(
+  "Cláudia",
+  "clauprudente",
+  "claudiamary.santos@gmail.com",
+  "senha123#"
+);
+console.log(userClaudia);
 
-const userJessi = new User('Jéssica', 'osko_jess', 'oskojess@gmail.com', 'senha123#');
-console.log(userJessi);
+console.log(userClaudia.login("claudiamary.santos@gmail.com", "senha123#"));
+console.log(userClaudia.setPassword("senhanova"));
 
-console.log(userJessi.login('oskojess@gmail.com', 'senha123#'))
-console.log(userJessi.setPassword('senhanova'))
-
-console.log(userJessi.password);
-
-
-
+console.log(userClaudia.password);

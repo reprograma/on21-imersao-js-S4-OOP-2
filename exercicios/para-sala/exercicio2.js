@@ -3,48 +3,49 @@ um novo objeto a partir de User. Precisamos refatorar nosso código.
 
 convenções de segurança da oop: 
 
-- público public - this.name 
+- público public - name 
 - privado private  - #
 - protegido protected  - _ */
 
-
 class User {
+  #password;
+  email;
 
-    #password;
-    email;
-    
-    constructor(name, userName, email, password){
-        this.name = name;
-        this.userName = userName;
-        this.email = email;
-        this.#password = password;
+  constructor(name, userName, email, password) {
+    this.name = name;
+    this.userName = userName;
+    this.email = email;
+    this.#password = password;
+  }
+
+  login(email, password) {
+    if (email === this.email && password === this.#password) {
+      return `Login realizado com sucesso/Login successfully`;
+    } else {
+      return `Autenticação falhou / Authentication failed`;
     }
+  } //getter e setter
 
-    login(email, password){
-        if(email === this.email && password === this.#password){
-           return `Login realizado com sucesso/Login successfully`
-        } else{
-        return `Autenticação falhou / Authentication failed`
-        }
-    }
-
-   get password(){
+  /* get password(){
     return this.#password;
    }
-
    set password(newPassword){
         this.#password = newPassword;
-   }
+   }*/
 
-   getEmail(){}
+  getPassword() {
+    return this.#password;
+  }
 
-
+  get password() {
+    return this.#password;
+  }
 }
 
-const userJessi = new User('Jéssica', 'osko_jess', 'oskojess@gmail.com', 'senha123#');
-console.log(userJessi.password)
-
-userJessi.password = 'senhaalterada'
-
-console.log(userJessi.password)
-
+const userClaudia = new User(
+  "Cláudia",
+  "clauprudente",
+  "claudiamary.santos@gmail.com",
+  "senha123#"
+);
+console.log(userClaudia.password);
