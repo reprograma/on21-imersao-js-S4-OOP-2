@@ -1,7 +1,7 @@
 class User {
-
-    #password;
-    email;
+//metodo de acesso
+    #password; // .atributo privado
+    email; // .atributo publico
 
     constructor(name, userName, email, password) {
         this.name = name;

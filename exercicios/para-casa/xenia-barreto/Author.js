@@ -32,12 +32,4 @@ export class Author {
     set birthdate(changeBirthdate){
         return this.#birthdate = changeBirthdate
     };
-
-    getName(){
-        return this.#name
-    };
-
-    setName(changeName){
-        return this.name = changeName
-    }
 }

@@ -8,58 +8,53 @@
     - 
 */
 
-export class Book {
+import { Author } from "./Author.js";
+
+export class Book extends Author{
     #name;
+    #nameBook;
     #isbn;
-    #author;
     #price;
     #qty;
 
-    constructor(name, isbn, author, price, qty){
-        this.#name = name;
+    constructor(name, nameBook, isbn, price, qty){
+        super(name)
+        this.#nameBook = nameBook
         this.#isbn = isbn;
-        this.#author = author;
         this.#price = price;
         this.#qty = qty;
     }
 
-    get name(){
-        return this.#name
+    getNameBook(){
+        return this.#nameBook
     };
 
-    get isbn(){
+    getIsbn(){
         return this.#isbn
     };
 
-    get author(){
-        return this.#author
-    };
-
-    get price(){
+    getPrice(){
         return this.#price
     };
 
-    get qty(){
+    getQty(){
         return this.#qty
     };
 
-    set name(changeName){
-        return this.#name = changeName
+    setNameBook(changeName){
+        return this.#nameBook = changeName
     };
 
-    set isbn(changeIsbn){
+    setIsbn(changeIsbn){
         return this.#isbn = changeIsbn
     };
 
-    set author(changeAuthor){
-        return this.#author = changeAuthor
-    };
-
-    set price(changePrice){
+    setPrice(changePrice){
         return this.#price = changePrice
     };
 
-    set qty(changeQty){
+    setQty(changeQty){
         return this.#qty = changeQty
     }
+
 }
