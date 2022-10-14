@@ -8,12 +8,6 @@ class Author {
     this.#birthdate = birthdate;
   }
 
-  start() {
-    this.#nameAuthor = nameAuthor;
-    this.#email = email;
-    this.#birthdate = birthdate;
-  }
-
   get nameAuthor() {
     return this.#nameAuthor;
   }
