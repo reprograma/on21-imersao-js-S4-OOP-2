@@ -35,6 +35,7 @@ class Book extends Author {
   setQty(newQty) {
     this.qty = newQty;
   }
+  
 }
 
 module.exports = Book;
