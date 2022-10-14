@@ -1,54 +1,45 @@
-/*Dando seguimento ao exercício 1, o atributo senha não pode ser mais retornado quando criamos
-um novo objeto a partir de User. Precisamos refatorar nosso código. 
+/*Crie uma classe chamada User com os atributos:
+- nome;
+- username;
+- email;
+- senha;
 
-convenções de segurança da oop: 
+Crie os seguintes metódos com as suas regras:
 
-- público public - name 
-- privado private  - #
-- protegido protected  - _ */
-
+- login: para logar precisa do email e senha e verificar se o email e senha estão corretos, se estiverem, retornar uma mensagem de login realizado,
+senão, falha no login;
+- alterar senha: possibilidade de trocar a senha atual por uma senha nova.
+*/
 
 class User {
-
-    #password;
-    email;
-
-    constructor(name, userName, email, password){
-        this.name = name;
-        this.userName = userName;
-        this.email = email;
-        this.#password = password;
+    constructor(name, username, email, password){
+        this.name = name,
+        this.username = username,
+        this.email = email,
+        this.password = password
     }
 
-    login(email, password){
-        if(email === this.email && password === this.#password){
-           return `Login realizado com sucesso/Login successfully`
-        } else{
-        return `Autenticação falhou / Authentication failed`
+    login(email, password) {
+        if(email === this.email && password === this.password){
+            return `Login efetuado com sucesso`
+        }
+        else {
+            return `ERROR! Falha no login`
         }
     }
 
-    //getter e setter
+    setNewSenha(newPassword) {
+        this.password === newPassword
+        return `Senha alterada com sucesso`
+    }
 
-  /* get password(){
-    return this.#password;
-   }
-
-   set password(newPassword){
-        this.#password = newPassword;
-   }*/
-
-   getPassword(){
-        return this.#password
-   }
-
-   get password(){  
-    return this.#password
-   }
-
-
+    getEmail() {
+        return `O email encontrado foi ${this.email}`;
+    }
 }
 
-const userJessi = new User('Jéssica', 'osko_jess', 'oskojess@gmail.com', 'senha123#');
-
-
+const user1 = new User('Bárbara', 'babipereira', 'babi@gmail.com', 123);
+console.log(user1);
+console.log(user1.login('babi@gmail.com', 1213));
+console.log(user1.setNewSenha(456));
+console.log(user1.getEmail());

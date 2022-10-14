@@ -1,37 +1,31 @@
-class User {
+/**Polimorfismo */
+class User{
+    
     email;
     name;
-    #password;
+    #password; 
 
     constructor(){}
 
     signUp(name, email, password){
         let isValidated = false;
-        console.log(isValidated)
-        isValidated = this.#validateEmail(email)
-        isValidated = this.#validatePassword(password)
-        console.log(isValidated)
+        isValidated = this.#validateEmail(email);
 
         if(isValidated){
             this.name = name;
             this.email = email;
             this.#password = password;
-            console.log("User criado com sucesso")
-        } else{
-            console.log("A conta não foi criada. Por gentileza, verificar as informações inseridas.")
+            console.log('Usuário criado com sucesso')
+        } else {
+            console.log('Autenticação falhou')
         }
-    }
-
-
-    #validatePassword(password){
-        return true
     }
 
     #validateEmail(email){
         let regex =  new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
         
         if(regex.test(email)){
-            console.log("Email correto")
+            console.log("Email validado")
             return true
         } else{
             console.log("Email incorreto")
@@ -40,64 +34,39 @@ class User {
 
     login(email, password){
         if(email === this.email && password === this.#password){
-           return `Login realizado com sucesso`
-        } else{
-        return `Autenticação falhou / Authentication failed`
+            return `Login efetuado com sucesso`
+        }
+        else{
+            return `ERROR! Falha no login`
         }
     }
 
-   get password(){
-    return this.#password;
-   }
-
-   set password(newPassword){
-        this.#password = newPassword;
-   }
-
-}
-
-class Author extends User{
-    #numPost;
-
-    constructor(nome){
-        super(nome)
-        this.#numPost = 0
-        this.post = []
+    set password(newPassword){
+        this.#password = newPassword
+        return `Senha alterada com sucesso`
     }
 
-    createPost(post){
-        this.post.push(post)
-        this.#numPost++    
-      }
-    
-      get numPost(){
-        return `${this.#numPost} post(s) created.` 
-      }
-    
-      get post(){
-        return `Author posts: ${this.post} `
-      }
-    
+    get email(){
+        return `O email encontrado foi ${this.email}`;
+    }
+
 }
 
 class Admin extends User{
     constructor(email, password){
-        super(email, password)
+        super(email, password);
     }
 
     login(email, password){
-        let isAdmin = true;
+        const isAdmin = true;
         if(email === this.email && password === this.password && isAdmin){
-            return `Login realizado com sucesso/Login successfully`
-         } else{
-         return `Autenticação falhou / Authentication failed`
-         }
+            return  `Login efetuado para Admin`;
+        } 
+        else{
+            return `Falha no login`
+        }
     }
 }
 
-
-const newAdmin = new Admin();
-console.log(newAdmin.signUp('oskojess@gmail.com', 'senha'))
-console.log(newAdmin.login('oskojess@gmail.com', 'senha'))
-
-
+const admin = new Admin('Bárbara', 'admin@gmail.com', 123);
+console.log(admin.login('Bárbara', 'admin@gmail.com', 123));

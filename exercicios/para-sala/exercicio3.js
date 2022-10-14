@@ -1,73 +1,36 @@
-/* Crie uma classe chamada Author que extenderá de User as informações de nome e 
-terá um atributo privado com o número de post inicializando com 0. 
+/* Herança
 
-Essa classe terá dos metódos, um para criar o post e 
-o outro obter o número de post criados. 
-
+Crie uma classe chamada Author que extenderá de User as informações de nome e terá um atributo privado com o número de post inicializando com 0. 
+Essa classe terá dos metódos, um para criar o post e o outro obter o número de post criados. 
 Observação: Criaremos a implementação da adição do post e da QUANTIDADE DE POST; */
 
-
-class User {
-
-    #password;
-
-    constructor(name, userName, email, password){
-        this.name = name;
-        this.userName = userName;
-        this.email = email;
-        this.#password = password;
-    }
-
-    login(email, password){
-        if(email === this.email && password === this.#password){
-           return `Login realizado com sucesso/Login successfully`
-        } else{
-        return `Autenticação falhou / Authentication failed`
-        }
-    }
-
-   get password(){
-    return this.#password;
-   }
-
-   set password(newPassword){
-        this.#password = newPassword;
-   }
-
-
-}
+const User = require('./exercicio2')
 
 class Author extends User{
     #numPost;
+    post;
 
-    constructor(nome){
-        super(nome)
-        this.#numPost = 0
-        this.post = []
+    constructor(name){
+        super(name)
+        this.#numPost = 0;
+        this.post = [];
     }
-
+        
     createPost(post){
-        this.post.push(post)
-        this.#numPost++    
-      }
+        this.post.push(post);
+        this.#numPost ++;
+    }    
     
-      get numPost(){
-        return `${this.#numPost} post(s) created.` 
-      }
-    
-      get post(){
-        return `Author posts: ${this.post} `
-      }
-    
+    get qtdPost(){
+        return `Você possui: ${this.#numPost} post(s) criados\n ${this.post}`
+    }
 }
 
-let authorJess = new Author('oskojess', '1978927')
-
-
-
-
-
-
-
-
-
+let autor1 = new Author('Maria')
+console.log(autor1);
+autor1.createPost('Meu primeiro post');
+autor1.createPost('Meu segundo post');
+autor1.createPost('Meu terceiro post');
+autor1.createPost('Meu quarto post');
+console.log(autor1.post)
+console.log(autor1.qtdPost)

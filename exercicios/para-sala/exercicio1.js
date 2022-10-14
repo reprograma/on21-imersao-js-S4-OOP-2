@@ -12,40 +12,34 @@ senão, falha no login;
 */
 
 class User {
-    constructor(name, userName, email, password){
-        this.name = name;
-        this.userName = userName;
-        this.email = email;
-        this.password = password;
+    constructor(name, username, email, password){
+        this.name = name,
+        this.username = username,
+        this.email = email,
+        this.password = password
     }
 
-    login(email, password){
+    login(email, password) {
         if(email === this.email && password === this.password){
-           return `Login realizado com sucesso/Login successfully`
-        } else{
-        return `Autenticação falhou / Authentication failed`
+            return `Login efetuado com sucesso`
+        }
+        else {
+            return `ERROR! Falha no login`
         }
     }
 
-    setPassword(newPassword){
-        this.password = newPassword;
-
-        return `Senha alterada`
+    setNewSenha(newPassword) {
+        this.password === newPassword
+        return `Senha alterada com sucesso`
     }
 
-    getEmail(){
-        return `o seu email cadastrado é ${this.email}`
+    getEmail() {
+        return `O email encontrado foi ${this.email}`;
     }
 }
 
-
-const userJessi = new User('Jéssica', 'osko_jess', 'oskojess@gmail.com', 'senha123#');
-console.log(userJessi);
-
-console.log(userJessi.login('oskojess@gmail.com', 'senha123#'))
-console.log(userJessi.setPassword('senhanova'))
-
-console.log(userJessi.password);
-
-
-
+const user1 = new User('Bárbara', 'babipereira', 'babi@gmail.com', 123);
+console.log(user1);
+console.log(user1.login('babi@gmail.com', 1213));
+console.log(user1.setNewSenha(456));
+console.log(user1.getEmail());
