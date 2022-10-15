@@ -34,3 +34,10 @@ class Book extends Author{
         return this.qty = qtd;
     }
 }
+
+const novoLivro = new Book('Os segredos da mente milionária', '5698734787124', '39.90', 76, 'T. Harv Eker' )
+console.log(novoLivro)
+console.log(novoLivro.author)
+console.log(novoLivro.nameBook)
+console.log(novoLivro.isbn)
+console.log(novoLivro.qty)

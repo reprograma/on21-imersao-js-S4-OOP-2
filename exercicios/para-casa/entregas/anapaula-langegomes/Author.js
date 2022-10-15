@@ -36,3 +36,7 @@ class Author {
         }
 }
 
+const novoAuthor = new Author('T. Harv Eker', 'anapaula.lange@gmail.com', '21/09/1993')
+console.log(novoAuthor);
+console.log(novoAuthor.name);
+
