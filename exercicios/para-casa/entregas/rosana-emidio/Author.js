@@ -29,7 +29,7 @@ class Author{
         return this.#email = newEmail;
     }
 
-    set birthday(newBirthdate) {
+    set birthdate(newBirthdate) {
         return this.#birthdate = newBirthdate;
     }
 }
