@@ -51,6 +51,8 @@ class Book extends Autor{
     
         
 }
-module.exports = Book;
+
 
 const Livro = new Book('Harry Potter - Ordem da Fênix','123145', 'Hotlinks', 35, 3)
+
+console.log(Livro.getNome())
