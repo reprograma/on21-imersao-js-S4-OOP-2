@@ -17,18 +17,18 @@
 //     - 
  
 class Author{
-    #name;
+    #nameAuthor;
     #email;
     #birthdate;
 
-    constructor(name, email, birthdate){
-        this.#name = name;
+    constructor(nameAuthor, email, birthdate){
+        this.#nameAuthor = nameAuthor;
         this.#email = email;
         this.#birthdate = birthdate;
     }
 
-    get name() {
-        return this.#name;
+    get nameAuthor() {
+        return this.#nameAuthor;
     }
 
     get email(){
@@ -39,8 +39,8 @@ class Author{
         return this.#birthdate;
     }
 
-    set name(newName){
-        this.#name = newName;
+    set nameAuthor(newName){
+        this.#nameAuthor = newName;
     }
 
     set email(newEmail){
@@ -52,34 +52,31 @@ class Author{
     }
 
     toString() {
-        return `Author[name=${this.#name}, email=${this.#email}, birthdate=${parse(this.#birthdate)}]`;
+        return `Author[name=${this.#nameAuthor}, email=${this.#email}, birthdate=${parse(this.#birthdate)}]`;
     }
-
-
 }
 
-const dadosAuthor = new Author("Jaqueline de Almeida", "jaqueshanti@gmail.com", "13/11/1984")
-
-console.log(dadosAuthor.birthdate)
+const dadosAuthor = new Author("Jaqueline de Almeida", "meuamil@mail.com", "20/01/1874")
+console.log(dadosAuthor.birthdate);
 
 class Book extends Author{
-    #name;
+    #nameBook;
     #isbn;
     #author;
     #price;
     #qty;
 
-    constructor(name, isbn, author, price, qty){
-        super(name);
-        this.#name = name;
+    constructor(nameBook, isbn, author, price, qty){
+        super(nameBook);
+        this.#nameBook = nameBook;
         this.#isbn = isbn;
         this.#author = author;
         this.#price = price;
         this.#qty = qty;
     }
 
-    get name(){
-        return  this.#name;
+    get nameBook(){
+        return  this.#nameBook;
     }
 
     get isbn(){
@@ -103,7 +100,7 @@ class Book extends Author{
     }
 
     set price(newPrice){
-       this.#name = newPrice;
+       this.#nameBook = newPrice;
     }
 
     set qty(newQty){
@@ -116,8 +113,6 @@ class Book extends Author{
 }
 
 const manualDeGinecologia = new Book("Manual de Ginecologia Natural e Autônoma", "1234", ["Jaqueline de Almeida","Lais Souza", "Luma Flores", "May Coelho"], 10.00, 1.000)
-
-
 console.log(manualDeGinecologia.getAuthorBook());
 
 
