@@ -1,0 +1,30 @@
+Iniciar
+
+npm init -y
+
+package.json :
+  "main": "index.js",
+  "type": "module",
+
+CONVENÇOES DE SEGURANÇA
+- publico = public - this.name  ** javascript mais atual
+- privado = private - # (protegido e nao pode ser acessada ou visualizada)** javascript mais atual
+- protegido = protected - _  (protegido mas pode visualizar - nao pode ser modificado) - pode ser encontrado, mas e antigo
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields#private_methods 
+
+Exemplos de protegido = https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+
+https://www.alura.com.br/artigos/as-classes-no-javascript 
+
+
+com o # já está privado pois não se vê no console.log(UserJessi), mas caso queira disponibilizá-lo, pode usar o get 
+
+FOR IN - é para objeto
+FOR OFF para array
+
+regex email: https://guisalmeida.com/aprendendo-regex-na-pr%C3%A1tica-validando-emails/ 
+
+projeto jess https://github.com/mugubr/javascript-heranca-polimorfismo-Alura/tree/aula5
+
+doc regex https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/test  
