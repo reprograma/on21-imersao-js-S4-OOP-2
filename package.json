@@ -1,0 +1,22 @@
+{
+  "name": "on21-imersao-js-s4-oop-2",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">   <img src=\"assets/reprograma-fundos-claros.png\" alt=\"logo reprograma\" width=\"500\"> </h1>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maritrombini/on21-imersao-js-S4-OOP-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maritrombini/on21-imersao-js-S4-OOP-2/issues"
+  },
+  "homepage": "https://github.com/maritrombini/on21-imersao-js-S4-OOP-2#readme",
+  "dependencies": {
+    "jest": "^29.1.2"
+  }
+}
